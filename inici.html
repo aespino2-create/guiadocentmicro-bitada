@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inici</title>
+    <title>Material Necessari</title>
     <style>
         * {
             box-sizing: border-box;
@@ -19,62 +19,88 @@
             justify-content: center;
             align-items: center;
             padding: 20px;
+            color: #333333;
         }
 
         .container {
             width: 100%;
-            max-width: 650px;
-            text-align: center;
-        }
-
-        .button-group {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-        }
-
-        @media (min-width: 600px) {
-            .button-group {
-                flex-direction: row;
-            }
-        }
-
-        .btn {
-            flex: 1;
-            display: inline-block;
-            padding: 18px 20px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: #333333;
+            max-width: 600px;
             background-color: #ffffff;
             border: 2px solid #d4ceb8;
-            border-radius: 12px;
-            text-decoration: none;
-            transition: all 0.2s ease;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            border-radius: 16px;
+            padding: 32px 28px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
         }
 
-        .btn:hover {
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #222222;
+            margin-bottom: 24px;
+            text-align: center;
+            border-bottom: 2px solid #f5f0eb;
+            padding-bottom: 12px;
+        }
+
+        ul {
+            list-style: none;
+            margin-bottom: 32px;
+        }
+
+        li {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 12px;
+            position: relative;
+            padding-left: 28px;
+        }
+
+        /* Punt personalitzat per a la llista */
+        li::before {
+            content: "•";
+            position: absolute;
+            left: 8px;
+            top: 0;
+            color: #333333;
+            font-size: 1.4rem;
+            line-height: 1.6;
+        }
+
+        .back-button {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 14px 20px;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #333333;
+            background-color: #f5f0eb;
+            border: 2px solid #d4ceb8;
+            border-radius: 10px;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .back-button:hover {
             background-color: #333333;
             color: #f5f0eb;
             border-color: #333333;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .btn:active {
-            transform: translateY(0);
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div class="button-group">
-            <a href="informacio.html" class="btn">Informació</a>
-            <a href="inscripcions.html" class="btn">Inscripcions</a>
-            <a href="material.html" class="btn">Material</a>
-        </div>
+        <h1>Material necessari</h1>
+
+        <ul>
+            <li>5 micro:bits descodificadores, identificades de l'1 al 5.</li>
+            <li>5 micro:bits per programar.</li>
+            <li>2 ordinadors per grup.</li>
+            <li>Pel repte 3 caldran 6 micro:bits.</li>
+        </ul>
+
+        <a href="inici.html" class="back-button">← Tornar a l'Inici</a>
     </div>
 
 </body>
