@@ -12,7 +12,7 @@
         }
 
         body {
-            background-color: #f5f0eb; /* Color cru / Cream */
+            background-color: #f5f0eb; /* Color cru / cremA */
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             min-height: 100vh;
             display: flex;
@@ -23,7 +23,7 @@
 
         .container {
             width: 100%;
-            max-width: 400px;
+            max-width: 450px;
             text-align: center;
         }
 
@@ -41,6 +41,7 @@
 
         .btn {
             flex: 1;
+            display: inline-block;
             padding: 16px 24px;
             font-size: 1.1rem;
             font-weight: 600;
@@ -48,7 +49,7 @@
             background-color: #ffffff;
             border: 2px solid #d4ceb8;
             border-radius: 12px;
-            cursor: pointer;
+            text-decoration: none;
             transition: all 0.2s ease;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
         }
@@ -70,8 +71,8 @@
 
     <div class="container">
         <div class="button-group">
-            <button class="btn" onclick="alert('Inscripcions')">Inscripcions</button>
-            <button class="btn" onclick="alert('Informació')">Informació</button>
+            <a href="inscripcions.html" class="btn">Inscripcions</a>
+            <a href="informacio.html" class="btn">Informació</a>
         </div>
     </div>
 
