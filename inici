@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inici</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #f5f0eb; /* Color cru / Cream */
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .button-group {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        @media (min-width: 480px) {
+            .button-group {
+                flex-direction: row;
+            }
+        }
+
+        .btn {
+            flex: 1;
+            padding: 16px 24px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #333333;
+            background-color: #ffffff;
+            border: 2px solid #d4ceb8;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .btn:hover {
+            background-color: #333333;
+            color: #f5f0eb;
+            border-color: #333333;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="button-group">
+            <button class="btn" onclick="alert('Inscripcions')">Inscripcions</button>
+            <button class="btn" onclick="alert('Informació')">Informació</button>
+        </div>
+    </div>
+
+</body>
+</html>
