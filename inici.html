@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guia Docent Micro:bitada</title>
+    <title>Material Necessari</title>
     <style>
         * {
             box-sizing: border-box;
@@ -24,56 +24,7 @@
 
         .container {
             width: 100%;
-            max-width: 650px;
-        }
-
-        /* VISTES / PÀGINES */
-        .page {
-            display: none;
-        }
-
-        .page.active {
-            display: block;
-        }
-
-        /* BOTONS DE L'INICI */
-        .button-group {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-        }
-
-        @media (min-width: 600px) {
-            .button-group {
-                flex-direction: row;
-            }
-        }
-
-        .btn {
-            flex: 1;
-            padding: 18px 20px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: #333333;
-            background-color: #ffffff;
-            border: 2px solid #d4ceb8;
-            border-radius: 12px;
-            cursor: pointer;
-            text-align: center;
-            transition: all 0.2s ease;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-        }
-
-        .btn:hover {
-            background-color: #333333;
-            color: #f5f0eb;
-            border-color: #333333;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        /* PÀGINA DE MATERIAL */
-        .card {
+            max-width: 600px;
             background-color: #ffffff;
             border: 2px solid #d4ceb8;
             border-radius: 16px;
@@ -89,6 +40,15 @@
             text-align: center;
             border-bottom: 2px solid #f5f0eb;
             padding-bottom: 12px;
+        }
+
+        .material-img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            border: 1px solid #d4ceb8;
+            margin-bottom: 24px;
+            display: block;
         }
 
         ul {
@@ -125,7 +85,7 @@
             background-color: #f5f0eb;
             border: 2px solid #d4ceb8;
             border-radius: 10px;
-            cursor: pointer;
+            text-decoration: none;
             transition: all 0.2s ease;
         }
 
@@ -139,40 +99,19 @@
 <body>
 
     <div class="container">
-        <!-- PÀGINA D'INICI -->
-        <div id="page-inici" class="page active">
-            <div class="button-group">
-                <button class="btn" onclick="alert('Pàgina d\'Informació')">Informació</button>
-                <button class="btn" onclick="alert('Pàgina d\'Inscripcions')">Inscripcions</button>
-                <button class="btn" onclick="showPage('page-material')">Material</button>
-            </div>
-        </div>
+        <h1>Material necessari</h1>
 
-        <!-- PÀGINA DE MATERIAL NECESSARI -->
-        <div id="page-material" class="page">
-            <div class="card">
-                <h1>Material necessari</h1>
+        <img src="https://aespino2-create.github.io/imatgesguiadocent/imatge02.jpg" alt="Material necessari" class="material-img">
 
-                <ul>
-                    <li>5 micro:bits descodificadores, identificades de l'1 al 5.</li>
-                    <li>5 micro:bits per programar.</li>
-                    <li>2 ordinadors per grup.</li>
-                    <li>Pel repte 3 caldran 6 micro:bits.</li>
-                </ul>
+        <ul>
+            <li>5 micro:bits descodificadores, identificades de l'1 al 5.</li>
+            <li>5 micro:bits per programar.</li>
+            <li>2 ordinadors per grup.</li>
+            <li>Pel repte 3 caldran 6 micro:bits.</li>
+        </ul>
 
-                <button class="back-button" onclick="showPage('page-inici')">← Tornar a l'Inici</button>
-            </div>
-        </div>
+        <a href="inici.html" class="back-button">← Tornar a l'Inici</a>
     </div>
-
-    <script>
-        function showPage(pageId) {
-            document.querySelectorAll('.page').forEach(page => {
-                page.classList.remove('active');
-            });
-            document.getElementById(pageId).classList.add('active');
-        }
-    </script>
 
 </body>
 </html>
